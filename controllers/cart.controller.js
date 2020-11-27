@@ -38,6 +38,7 @@ module.exports = {
         for (var i=0;i<products.length;i++){
             products[i].quantity=db.get('sessions').find({
                 id: sessionID
+                
             }).value().cart[products[i].id];
         }
         // console.log(products);
